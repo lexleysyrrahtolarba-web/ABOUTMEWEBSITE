@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slam Book – LEXLEY</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background: linear-gradient(
+        to bottom right, 
+        #ffe1e1, 
+        #ffd2d2, 
+        #ffc3c3, 
+        #ffb7b7, 
+        #ff9d9d
+      );
+      color: #2b2d42;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      padding: 20px; 
+      min-height: 100vh;
+    }
+    .profile-picture {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #f72585;
+      margin-bottom: 15px;
+    }
 
+    /* Flip card styles */
+    .flip-card {
+      background: transparent;
+      width: 100%;
+      height: 200px;
+      perspective: 1000px;
+      margin-bottom: 20px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    .flip-card-front {
+      background-color: #ffe6e6;
+    }
+    .flip-card-back {
+      background-color: #e6fff2;
+      transform: rotateY(180deg);
+    }
+    h1 {
+      color: #d62828;
+      font-weight: bold;
+    }
+    .btn-custom {
+      margin: 5px;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+    /* Fix for 4th flipcard image */
+    .family-picture {
+      max-height: 100px;
+      width: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+      object-fit: cover;
+    }
+    /* Top-right page navigation button */
+    .page-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Button to PAGE2 -->
+<a href="PAGE2.html" class="btn btn-dark page-btn"><i class="bi bi-arrow-right-circle"></i> Go to Page 2</a>
+
+<div class="container mt-4">
+
+  <!-- Header -->
+  <div class="row align-items-center mb-4 text-center"> 
+    <div class="col-12">
+      <img src="https://raw.githubusercontent.com/lexleysyrrahtolarba-web/ABOUTMEWEBSITE/main/LEX.jpg" 
+           alt="Profile Picture" 
+           class="profile-picture img-fluid">
+      <h1>Hi, I’m Lexley Syrrah S. Tolarba </h1>
+      <h1>Nickname: Lex / Chenne</h1>
+      <p><em>"ETO SOAFER MAGANDA LANG"</em></p>
+    </div>
+  </div>
+
+  <!-- Slam Book Flip-Cards -->
+  <div class="row">
+    <!-- Flipcard 1 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h5><i class="bi bi-cake2-fill"></i> Birthday & Age</h5>
+            <p>Tap to see details 🎂</p>
+          </div>
+          <div class="flip-card-back">
+            <p><strong>Birthday:</strong> March 19, 2004 <br>
+               <strong>Age:</strong> 21</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipcard 2 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-color:#ffe7d1;">
+            <h5><i class="bi bi-stars"></i> Zodiac & Color</h5>
+            <p>Tap to see ✨</p>
+          </div>
+          <div class="flip-card-back" style="background-color:#f3e8ff;">
+            <p><strong>Zodiac Sign:</strong> Pisces <br>
+               <strong>Favorite Color:</strong> Pink</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipcard 3 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-color:#f3e8ff;">
+            <h5><i class="bi bi-heart"></i> Hobbies & Motto</h5>
+            <p>Tap to see 💡</p>
+          </div>
+          <div class="flip-card-back" style="background-color:#fff9d6;">
+            <p><strong>Hobbies:</strong> Watching movies/series & listening to music <br>
+               <strong>Motto:</strong> "In the wild of changing things, hold on to the beautiful things"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipcard 4 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-color:#e6fff2;">
+            <h5><i class="bi bi-house-door-fill"></i> Address & Family</h5>
+            <p>Tap to see 🏡</p>
+          </div>
+          <div class="flip-card-back" style="background-color:#ffe6e6;">
+            <p><strong>Address:</strong> Happy Homes Greenfield, Pawa, Legazpi City <br>
+               <strong>Family:</strong></p>
+            <img src="https://raw.githubusercontent.com/lexleysyrrahtolarba-web/ABOUTMEWEBSITE/main/FAMILY.jpg" 
+                 alt="Family Picture" 
+                 class="family-picture">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipcard 5 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-color:#fff9d6;">
+            <h5><i class="bi bi-music-note-beamed"></i> Song & Fun Fact</h5>
+            <p>Tap to see 🎶</p>
+          </div>
+          <div class="flip-card-back" style="background-color:#d1e7ff;">
+            <p><strong>Song on Repeat:</strong> Balisong – Rivermaya <br>
+               <strong>Fun Fact:</strong> I often skip breakfast just to make sure I have time to slay my makeup look</p>
+            <p><a href="https://open.spotify.com/track/4aD5i2sgbsAbSubI8cnr2p?si=3d49769bc51041dd">🎧 Listen on Spotify</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipcard 6 -->
+    <div class="col-md-6">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="background-color:#d1e7ff;">
+            <h5><i class="bi bi-emoji-smile"></i> Favorites</h5>
+            <p>Tap to see 🍟🍜</p>
+          </div>
+          <div class="flip-card-back" style="background-color:#ffe7d1;">
+            <p><strong>Favorite Food:</strong> Fries, Ramen, Milk Tea <br>
+               <strong>Favorite Movies:</strong> ROMCOM Movies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="text-center mt-4">
+    <a href="https://www.instagram.com/bellelexley.syrrah?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn btn-danger btn-custom"><i class="bi bi-instagram"></i> Instagram</a>
+    <button onclick="window.location.href='https://www.facebook.com/lexleysyrrah.tolarba';" class="btn btn-primary btn-custom"><i class="bi bi-facebook"></i> Facebook</button>
+    <button onclick="location.href='mailto:lexleysyrrahtolarba@gmail.com';" class="btn btn-success btn-custom"><i class="bi bi-envelope-fill"></i> Email</button>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
