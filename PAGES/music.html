@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <audio id="bg-music" loop>
+    <source src="Rivermaya  Balisong Karaoke Instrumental.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bg-music");
+
+    // Listen for toggle messages from parent page
+    window.addEventListener("message", (event) => {
+      if (event.data === "toggle") {
+        if (music.paused) {
+          music.play();
+        } else {
+          music.pause();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
