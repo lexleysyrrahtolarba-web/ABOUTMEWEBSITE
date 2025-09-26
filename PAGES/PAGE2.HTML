@@ -1,105 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Page 2 – Lexley</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slam Book: The Alternate Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    body{
-      background: linear-gradient(
-        to bottom right,
-        #ffe1e1, #ffd2d2, #ffc3c3, #ffb7b7, #ff9d9d
-      );
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      min-height:100vh;
-      padding:24px;
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffe1e1, #ffd2d2, #ffc3c3, #ffb7b7, #ff9d9d);
+      font-family: "Poppins", sans-serif;
+    }
+    .page-wrapper {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      font-weight: 700;
+      color: #b30059;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .section {
+      border: 2px dashed #ff9d9d;
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .section:hover {
+      transform: scale(1.02);
+    }
+    .section h3 {
+      color: #b30059;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
-    /* top-right button */
-    .page-btn{
+    /* Flip card styles for profile picture */
+    .flip-card {
+      background-color: transparent;
+      width: 180px;
+      height: 180px;
+      perspective: 1000px;
+      margin: 0 auto 20px auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      z-index: 50;
+      width: 100%;
+      height: 105%;
+      border-radius: 50%;
+      backface-visibility: hidden;
+      overflow: hidden;
+      border: 4px solid #ff9d9d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .flip-card-front img, .flip-card-back img {
+      width: 100%;
+      height: 105%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
     }
 
-    .card-slab{
-      background: rgba(255,255,255,0.85);
-      border-radius: 12px;
-      padding: 28px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
-    .hint {
-      font-size: .95rem;
-      color:#333;
-      margin-top: 12px;
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Back button (tries index.html first, falls back to history.back()) -->
-  <button id="backBtn" class="btn btn-dark page-btn">
-    <i class="bi bi-arrow-left-circle"></i> Back to Page 1
-  </button>
 
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-8 col-md-10 text-center card-slab">
-        <h1>Welcome to Page 2 🚀</h1>
-        <p class="lead">This is your second page. Use the top-right button to go back.</p>
+  <div class="page-wrapper">
+    <!-- Back button -->
+    <a href="PAGE1.html" class="btn btn-dark back-btn">⬅ Back to Page 1</a>
 
-        <hr>
+    <!-- Title -->
+    <h1>The Alternate Me ✨</h1>
 
-        <p>Example content — add whatever you want here (more flipcards, photos, etc.).</p>
+    <!-- Flipping Profile Picture -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://raw.githubusercontent.com/lexleysyrrahtolarba-web/ABOUTMEWEBSITE/main/LEX3.jpg" alt="Profile Picture Front">
+        </div>
+        <div class="flip-card-back">
+          <img src="https://raw.githubusercontent.com/lexleysyrrahtolarba-web/ABOUTMEWEBSITE/main/LEX2.jpg" alt="Profile Picture Back">
+        </div>
+      </div>
+    </div>
 
-        <p class="hint" id="status" style="display:none;"></p>
+    <!-- Sections -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section">
+          <h3>🌟 Alternate Career</h3>
+          <p>If nursing wasn’t my top choice, I could see myself as an <b>IT Professional.</b>.</p>
+        </div>
+        <div class="section">
+          <h3>🚀 Who I Am in the Future</h3>
+          <p>In the future, I imagine myself as someone who <b>works in DPWH(PALDO)</b>.</p>
+          <p>Jokes aside, I imagine myself as someone who <b>has a stable yet honest living and also happy.</b>.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section">
+          <h3>🌍 My Contribution</h3>
+          <p>My “ambag” to the future world would be <b>develop IT discoveries that helps those who are in need.</b>.</p>
+        </div>
+        <div class="section">
+          <h3>⭐ My Ambitions</h3>
+          <p>“Consistently striving to better myself for my career and my loved ones.”</p>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    (function(){
-      const backBtn = document.getElementById('backBtn');
-      const statusEl = document.getElementById('status');
+    // track state locally for button label
+    let musicPlaying = false;
 
-      // NAME OF PAGE 1: change if your page is not "index.html"
-      const page1 = 'index.html';
+    function toggleMusic() {
+      const btn = document.querySelector('.music-btn');
+      const frame = document.getElementById('music-frame');
 
-      backBtn.addEventListener('click', function(){
-        // Try a HEAD fetch to see if index.html exists (works when hosted over http/https)
-        // If fetch fails (CORS or file://), fall back to history.back()
-        try {
-          fetch(page1, { method: 'HEAD' })
-            .then(resp => {
-              if (resp.ok) {
-                // index.html exists — go there
-                window.location.href = page1;
-              } else {
-                // not found — fallback to history
-                statusEl.style.display = 'block';
-                statusEl.textContent = 'Index file not found. Attempting browser back...';
-                history.back();
-              }
-            })
-            .catch(err => {
-              // fetch blocked (e.g. file://) or other error — just go back in history
-              statusEl.style.display = 'block';
-              statusEl.textContent = 'Could not check index. Falling back to browser back...';
-              history.back();
-            });
-        } catch (e) {
-          // safety fallback
-          history.back();
-        }
-      });
-    })();
+      frame.contentWindow.postMessage({ action: 'toggle' }, '*');
+
+      musicPlaying = !musicPlaying;
+      btn.innerHTML = musicPlaying
+        ? '<i class="bi bi-pause-circle"></i> Pause Music'
+        : '<i class="bi bi-music-note-beamed"></i> Play Music';
+    }
   </script>
-
 </body>
 </html>
